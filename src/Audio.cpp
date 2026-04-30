@@ -4795,6 +4795,7 @@ bool Audio::parseHttpResponseHeader() { // this is the response to a GET / reque
                     }
                     info(*this, evt_info, "redirect to new host \"%s\"", c_host);
                     m_f_reset_m3u8Codec = false;
+                    m_lastHost.assign(c_host);
                     httpPrint(c_host);
                     return true;
                 }
